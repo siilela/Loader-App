@@ -30,13 +30,13 @@ export default function App() {
   // };
   const renderUser = (
     <div className="userlist-container">
-      {users.map((item, index) => (
-        <div className="user-container" key={index}>
-          <img src={item.avatar} alt="" />
+      {users.map((user) => (
+        <div className="user-container" key={user.id}>
+          <img src={user.avatar} alt="" />
           <div className="userDetail">
-            <div className="first-name">{`${item.first_name}                
-                                   ${item.last_name}`}</div>
-            <div className="last-name">{item.email}</div>
+            <div className="first-name">{`${user.first_name}                
+                                   ${user.last_name}`}</div>
+            <div className="last-name">{user.email}</div>
           </div>
         </div>
       ))}
